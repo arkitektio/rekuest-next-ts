@@ -1,3 +1,4 @@
-# herre
+# rekuest-next-ts
 
-Implements an Oauth2/Openid connect authorization-code protocol
+a minimal typescript client for the rekuest-next service
+(highly experimental)
