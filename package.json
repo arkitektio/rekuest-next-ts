@@ -1,6 +1,6 @@
 {
   "name": "@jhnnsrs/rekuest-next",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
