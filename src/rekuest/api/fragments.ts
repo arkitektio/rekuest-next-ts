@@ -13,28 +13,9 @@
       "SliderAssignWidget",
       "StringAssignWidget"
     ],
-    "AssignableNode": [
-      "ArkitektFilterGraphNode",
-      "ArkitektGraphNode"
-    ],
     "Effect": [
       "CustomEffect",
       "MessageEffect"
-    ],
-    "GraphEdge": [
-      "LoggingEdge",
-      "VanillaEdge"
-    ],
-    "GraphNode": [
-      "ArgNode",
-      "ArkitektFilterGraphNode",
-      "ArkitektGraphNode",
-      "ReactiveNode",
-      "ReturnNode"
-    ],
-    "RetriableNode": [
-      "ArkitektFilterGraphNode",
-      "ArkitektGraphNode"
     ],
     "ReturnWidget": [
       "ChoiceReturnWidget",

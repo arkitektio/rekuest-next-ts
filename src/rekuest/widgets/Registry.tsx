@@ -1,5 +1,5 @@
 import React from "react";
-import { EffectKind, PortKind } from "../api/graphql";
+import { PortKind } from "../api/graphql";
 import {
   EffectWidgetProps,
   InputWidgetProps,
