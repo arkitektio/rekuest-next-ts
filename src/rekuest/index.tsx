@@ -16,7 +16,6 @@ import {
 import { GraphQLPostman, GraphQLPostmanProps } from "./postman/GraphQLPostman";
 import { usePostman, PostmanContext } from "./postman/PostmanContext";
 import { EffectWrapper } from "./widgets/EffectWrapper";
-import { NodeDescription } from "./components/NodeDescription";
 import {
   InputWidgetProps,
   ReturnWidgetProps,
@@ -59,6 +58,7 @@ import {
   Uassignation,
   Unprovision,
 } from "./postman/types";
+import { useNodeDescription } from "./hooks/useNodeDescription";
 
 export {
   RekuestGuard,
@@ -69,7 +69,7 @@ export {
   PostmanProvider,
   useRekuestQuery,
   RekuestProvider,
-  NodeDescription,
+  useNodeDescription,
   WidgetRegistryContext,
   rekuestGuarded,
   PostmanContext,

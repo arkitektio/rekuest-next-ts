@@ -22,6 +22,9 @@ export const NoHerre: React.FC<PublicHomeProps> = (props) => {
     return () => clearTimeout(intervalId);
   }, []);
 
+  
+  let lok = fakts?.lok as any
+
   return (
     <main className="mt-10 mx-auto px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
       <div className="sm:text-center lg:text-left">
@@ -39,25 +42,25 @@ export const NoHerre: React.FC<PublicHomeProps> = (props) => {
               <div className="flex flex-row  gap-2">hmm</div>
             ) : (
               <button
-                onClick={() =>
-                  login(
+                onClick={() => {
+                  return login(
                     {
-                      clientId: fakts.lok.client_id,
-                      clientSecret: fakts.lok.client_secret,
-                      scopes: fakts.lok.scopes,
+                      clientId: lok.client_id,
+                      clientSecret: lok.client_secret,
+                      scopes: lok.scopes,
                       redirectUri: window.location.origin + "/callback",
                     },
                     {
-                      base_url: fakts.lok.base_url,
-                      tokenUrl: fakts.lok.base_url + "/token/",
-                      userInfoEndpoint: fakts.lok.base_url + "/userinfo/",
-                      authUrl: fakts.lok.base_url + "/authorize/",
+                      base_url: lok.base_url,
+                      tokenUrl:lok.base_url + "/token/",
+                      userInfoEndpoint: lok.base_url + "/userinfo/",
+                      authUrl: lok.base_url + "/authorize/",
                     }
-                  )
+                  )}
                 }
                 className="w-full shadow-lg shadow-primary-300/60 flex items-center justify-center px-8 py-3 border text-base font-medium rounded-md dark:text-white text-back-700 border-primary-400 bg-primary-300 hover:bg-primary-400 md:py-4 md:text-lg md:px-10"
               >
-                Login with {fakts?.lok?.base_url}
+                Login with {lok?.base_url}
               </button>
             )}
           </div>

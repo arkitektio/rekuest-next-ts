@@ -1,22 +1,25 @@
-import { useState } from "react";
-import "./App.css";
 import {
-  FaktsProvider,
   FaktsGuard,
-  useFakts,
+  FaktsProvider,
   WellKnownDiscovery,
+  demandRetrieve,
+  useFakts,
+  buildFailsafeDemander,
+  demandDeviceToken,
+  buildRemoteGrant,
 } from "@jhnnsrs/fakts";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Callback } from "./contrib/Callback";
-import { NoHerre } from "./NoHerre";
 import { HerreGuard, HerreProvider, useHerre } from "@jhnnsrs/herre";
-import { RekuestGuard, RekuestProvider, withRekuest } from "./rekuest";
-import { RekuestAutoConfigure } from "./contrib/RekuestAutoConfigure";
+import { useState } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
+import { NoHerre } from "./NoHerre";
 import { NoRekuest } from "./NoRekuest";
+import { Callback } from "./contrib/Callback";
 import { FaktsLogin } from "./contrib/FaktsLogin";
-import { PostmanProvider } from "./rekuest/postman/PostmanProvider";
+import { RekuestAutoConfigure } from "./contrib/RekuestAutoConfigure";
 import { TestNode } from "./contrib/TestNode";
-import { WidgetRegistry } from "./rekuest/widgets/Registry";
+import { RekuestGuard, RekuestProvider } from "./rekuest";
+import { PostmanProvider } from "./rekuest/postman/PostmanProvider";
 import { WidgetRegistryProvider } from "./rekuest/widgets/WidgetsProvider";
 
 export const Log = () => {
@@ -30,7 +33,7 @@ export const Log = () => {
         fakts.setFakts(null);
       }}
     >
-      ssss
+      Disconnect
     </button>
   );
 };
@@ -53,13 +56,16 @@ export const ProtectedApp = () => {
   );
 };
 
+
+export const grant = buildRemoteGrant({ demand: buildFailsafeDemander(demandRetrieve, demandDeviceToken)})
+
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <FaktsProvider>
-        <WellKnownDiscovery endpoints={["http://localhost:8233"]} />
+      <FaktsProvider grant={grant}>
+        <WellKnownDiscovery endpoints={["http://localhost:12000"]} />
         <FaktsGuard fallback={<FaktsLogin />}>
           <HerreProvider>
             <Router>

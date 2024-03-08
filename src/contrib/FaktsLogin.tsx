@@ -2,7 +2,8 @@ import { useFakts } from "@jhnnsrs/fakts";
 
 const manifest = {
   version: "0.0.1",
-  identifier: "github.io.jhnnsrs.orkestrator",
+  identifier: "github.io.jhnnsrs.dfff",
+  scopes: ["read"]
 };
 
 export const FaktsLogin: React.FC<{}> = (props) => {
@@ -18,8 +19,8 @@ export const FaktsLogin: React.FC<{}> = (props) => {
             load({
               endpoint: e,
               manifest,
-            }).catch((e) => {
-              alert(e.message);
+              requestedClientType: "desktop",
+              requestPublic: false,
             })
           }
           className="w-full shadow-lg shadow-primary-700/90 flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-300 hover:bg-primary-500 md:py-4 md:text-lg md:px-10"

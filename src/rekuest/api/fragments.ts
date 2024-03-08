@@ -14,6 +14,7 @@
       "StringAssignWidget"
     ],
     "AssignableNode": [
+      "ArkitektFilterGraphNode",
       "ArkitektGraphNode"
     ],
     "Effect": [
@@ -26,11 +27,13 @@
     ],
     "GraphNode": [
       "ArgNode",
+      "ArkitektFilterGraphNode",
       "ArkitektGraphNode",
       "ReactiveNode",
       "ReturnNode"
     ],
     "RetriableNode": [
+      "ArkitektFilterGraphNode",
       "ArkitektGraphNode"
     ],
     "ReturnWidget": [

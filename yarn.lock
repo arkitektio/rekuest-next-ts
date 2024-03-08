@@ -1006,12 +1006,12 @@
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.2.0.tgz#5f3d96ec6b2354ad6d8a28bf216a1d97b5426861"
   integrity sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==
 
-"@jhnnsrs/fakts@0.1.16":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@jhnnsrs/fakts/-/fakts-0.1.16.tgz#b259fd1da60de5466c6ff6bbd267d5c1ced38843"
-  integrity sha512-agg5sK7lp7qbGZS3kRv57VfmNVs13o6XJqSAN2eRfDb8j38KGOsTc+r+XuHaGeSjzaioY73MyDdjHSB+iicNaw==
+"@jhnnsrs/fakts@^0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@jhnnsrs/fakts/-/fakts-0.0.25.tgz#60981966cd2e1d4f923b2e22d87858e5480c7c32"
+  integrity sha512-oKPOjexczGJeibpDVDp3it+WL7poslvOQcPfFc0n/tqN4O3AXsrxzLpVmVxmqaLWp2P7loBLPzZg9BRDdWL8kQ==
   dependencies:
-    cancelable-promise "^4.3.0"
+    any-signal "^4.1.1"
 
 "@jhnnsrs/herre@0.0.11":
   version "0.0.11"
@@ -1528,6 +1528,11 @@ ansi-styles@^5.0.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-5.2.0.tgz#07449690ad45777d1924ac2abb2fc8895dba836b"
   integrity sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==
+
+any-signal@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/any-signal/-/any-signal-4.1.1.tgz#928416c355c66899e6b2a91cad4488f0324bae03"
+  integrity sha512-iADenERppdC+A2YKbOXXB2WUeABLaM6qnpZ70kZbPZ1cZMMJ7eF+3CaYm+/PhBizgkzlvssC7QuHS30oOiQYWA==
 
 anymatch@~3.1.2:
   version "3.1.3"
